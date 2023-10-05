@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="224.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="percabanganjfx2.Controller.PercabanganJFX2tController">
+   <children>
+      <Label layoutX="14.0" layoutY="31.0" text="Beli" />
+      <TextField fx:id="txtbeli" layoutX="59.0" layoutY="27.0" />
+      <Label layoutX="14.0" layoutY="63.0" text="Barang" />
+      <RadioButton fx:id="rdbpensil" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" selected="true" text="Pensil">
+         <toggleGroup>
+            <ToggleGroup fx:id="Barang" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdbpulpen" layoutX="59.0" layoutY="88.0" mnemonicParsing="false" text="Pulpen" toggleGroup="$Barang" />
+      <RadioButton fx:id="rdbbuku" layoutX="59.0" layoutY="113.0" mnemonicParsing="false" text="Buku Tulis" toggleGroup="$Barang" />
+      <Label layoutX="14.0" layoutY="143.0" text="Label" />
+      <Label layoutX="14.0" layoutY="254.0" text="Bayar" />
+      <TextField fx:id="txtbayar" layoutX="59.0" layoutY="250.0" />
+      <Button fx:id="btnhitung" layoutX="7.0" layoutY="300.0" mnemonicParsing="false" onAction="#hitungklik" text="Hitung" />
+      <Button fx:id="btnhapus" layoutX="86.0" layoutY="300.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <Button fx:id="btnkeluar" layoutX="158.0" layoutY="300.0" mnemonicParsing="false" onAction="#keluarlik" text="Keluar" />
+      <ToggleButton fx:id="tgbunit" layoutX="59.0" layoutY="139.0" mnemonicParsing="false" selected="true" text="Unit">
+         <toggleGroup>
+            <ToggleGroup fx:id="Satuan" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="tgbpaket" layoutX="56.0" layoutY="170.0" mnemonicParsing="false" text="Paket" toggleGroup="$Satuan" />
+      <ToggleButton fx:id="tgbbox" layoutX="58.0" layoutY="206.0" mnemonicParsing="false" text="Box" toggleGroup="$Satuan" />
+   </children>
+</AnchorPane>
